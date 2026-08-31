@@ -225,3 +225,51 @@ function removeItem(index) {
 /* Start with empty bag */
 
 updateBag();
+
+/* =====================================================
+   WOMEN PRODUCT FILTER
+===================================================== */
+const womenTabs = document.querySelectorAll(".women-tab");
+const womenProducts = document.querySelectorAll(".women-product");
+womenTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    womenTabs.forEach(item => {
+      item.classList.remove("active");
+    });
+    tab.classList.add("active");
+    const filter = tab.dataset.filter;
+    womenProducts.forEach(product => {
+      const categories = product.dataset.category.split(" ");
+      if (filter === "all" || categories.includes(filter)) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  });
+});
+/* =====================================================
+   WOMEN ADD TO BAG
+===================================================== */
+document.querySelectorAll(".women-bag-btn").forEach(button => {
+  button.addEventListener("click", function() {
+    const product = this.closest(".women-product");
+    const name = product.querySelector("h3").textContent;
+    const priceText = product.querySelector(".women-product-info p").textContent;
+    const price = parseInt(
+      priceText
+        .replace("PKR", "")
+        .replace(",", "")
+        .trim()
+    );
+    cart.push({
+      name: name,
+      price: price
+    });
+    updateBag();
+    this.innerHTML = "ADDED ✓";
+    setTimeout(() => {
+      this.innerHTML = 'ADD TO BAG <i class="bi bi-bag"></i>';
+    }, 1000);
+  });
+});
