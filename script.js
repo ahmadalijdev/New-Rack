@@ -273,3 +273,155 @@ document.querySelectorAll(".women-bag-btn").forEach(button => {
     }, 1000);
   });
 });
+
+/* =====================================================
+   KIDS PRODUCT FILTER
+===================================================== */
+
+const kidsTabs = document.querySelectorAll(".kids-tab");
+const kidsProducts = document.querySelectorAll(".kids-product");
+
+kidsTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    kidsTabs.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    tab.classList.add("active");
+
+    const filter = tab.dataset.filter;
+
+    kidsProducts.forEach(product => {
+      const categories = product.dataset.category.split(" ");
+
+      if (
+        filter === "all" ||
+        categories.includes(filter)
+      ) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  });
+});
+
+
+/* =====================================================
+   KIDS ADD TO BAG
+===================================================== */
+
+document.querySelectorAll(".kids-bag-btn").forEach(button => {
+  button.addEventListener("click", function() {
+
+    const product = this.closest(".kids-product");
+
+    const name =
+      product.querySelector("h3").textContent;
+
+    const priceText =
+      product.querySelector(".kids-product-info p").textContent;
+
+    const price = parseInt(
+      priceText
+        .replace("PKR", "")
+        .replace(",", "")
+        .trim()
+    );
+
+    cart.push({
+      name: name,
+      price: price
+    });
+
+    updateBag();
+
+    this.innerHTML = "ADDED ✓";
+
+    setTimeout(() => {
+      this.innerHTML =
+        'ADD TO BAG <i class="bi bi-bag"></i>';
+    }, 1000);
+  });
+});
+
+/* =====================================================
+   ACCESSORIES PRODUCT FILTER
+===================================================== */
+
+const accessoriesTabs =
+  document.querySelectorAll(".accessories-tab");
+
+const accessoriesProducts =
+  document.querySelectorAll(".accessories-product");
+
+accessoriesTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+    accessoriesTabs.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    tab.classList.add("active");
+
+    const filter = tab.dataset.filter;
+
+    accessoriesProducts.forEach(product => {
+      const categories =
+        product.dataset.category.split(" ");
+
+      if (
+        filter === "all" ||
+        categories.includes(filter)
+      ) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  });
+});
+
+
+/* =====================================================
+   ACCESSORIES ADD TO BAG
+===================================================== */
+
+document.querySelectorAll(".accessories-bag-btn")
+  .forEach(button => {
+
+    button.addEventListener("click", function() {
+
+      const product =
+        this.closest(".accessories-product");
+
+      const name =
+        product.querySelector("h3").textContent;
+
+      const priceText =
+        product.querySelector(
+          ".accessories-product-info p"
+        ).textContent;
+
+      const price = parseInt(
+        priceText
+          .replace("PKR", "")
+          .replace(",", "")
+          .trim()
+      );
+
+      cart.push({
+        name: name,
+        price: price
+      });
+
+      updateBag();
+
+      this.innerHTML = "ADDED ✓";
+
+      setTimeout(() => {
+        this.innerHTML =
+          'ADD TO BAG <i class="bi bi-bag"></i>';
+      }, 1000);
+    });
+  });
