@@ -436,3 +436,11 @@ contactBtn.addEventListener("click", function() {
 contactClose.addEventListener("click", function() {
   contactPanel.classList.remove("open");
 });
+const mobileBagBtn = document.getElementById("mobileBagBtn");
+
+if (mobileBagBtn) {
+  mobileBagBtn.addEventListener("click", function() {
+    bagPanel.classList.add("open");
+    bagOverlay.classList.add("open");
+  });
+}
