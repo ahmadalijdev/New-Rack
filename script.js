@@ -425,3 +425,14 @@ document.querySelectorAll(".accessories-bag-btn")
       }, 1000);
     });
   });
+  const contactBtn = document.getElementById("contactBtn");
+const contactPanel = document.getElementById("contactPanel");
+const contactClose = document.getElementById("contactClose");
+
+contactBtn.addEventListener("click", function() {
+  contactPanel.classList.add("open");
+});
+
+contactClose.addEventListener("click", function() {
+  contactPanel.classList.remove("open");
+});
