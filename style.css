@@ -109,8 +109,8 @@ img {
 
   border-radius: 999px;
 
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(220px) saturate(280%);
+  -webkit-backdrop-filter: blur(220px) saturate(280%);
 
   transition:
     box-shadow 0.3s ease,
@@ -1238,6 +1238,7 @@ img {
   height: 100%;
 
   object-fit: cover;
+  object-position: top;
 
   transition:
     transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
