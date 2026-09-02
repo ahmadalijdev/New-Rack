@@ -16,13 +16,13 @@ const products = [
 
   {
     id: "men-item-1",
-    name: "Oversized T-Shirt",
+    name: "Shirt",
     section: "men",
     category: "T-SHIRTS",
     filters: ["tshirt", "new"],
     price: 2490,
     color: "Black",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["standard"],
     description:
       "A relaxed oversized silhouette designed for everyday wear.",
     images: [
