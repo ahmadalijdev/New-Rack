@@ -103,14 +103,14 @@ img {
 
   height: 66px;
 
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.72);
 
   border: 1px solid rgba(217, 222, 232, 0.8);
 
   border-radius: 999px;
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
 
   transition:
     box-shadow 0.3s ease,
@@ -119,7 +119,7 @@ img {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.85);
 
   box-shadow:
     0 10px 35px rgba(11, 18, 32, 0.08);
@@ -2524,19 +2524,30 @@ input:focus-visible {
 
   .navbar-inner {
     padding: 0 18px;
+
+    align-items: center;
   }
 
   .nav-links {
     gap: 20px;
   }
 
-  .nav-actions .whatsapp-link,
-  .nav-actions .instagram-link {
+  /*
+   * Desktop-only icon cluster (search, bag,
+   * whatsapp, instagram) is fully hidden here.
+   * The mobile search button + floating
+   * contact/bag buttons take over instead,
+   * so the grid never gets a stray 4th
+   * column that breaks vertical alignment.
+   */
+  .nav-actions {
     display: none;
   }
 
   .mobile-nav-actions {
     display: flex;
+
+    align-items: center;
     justify-content: flex-end;
   }
 
@@ -2620,6 +2631,8 @@ input:focus-visible {
 
     grid-template-columns: 1fr auto;
 
+    align-items: center;
+
     padding: 0 15px;
   }
 
@@ -2636,6 +2649,11 @@ input:focus-visible {
   }
 
   .mobile-nav-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
     gap: 5px;
   }
 
@@ -2651,9 +2669,11 @@ input:focus-visible {
 
     gap: 20px;
 
-    padding: 0 15px 12px;
+    padding: 10px 15px 12px;
 
     overflow-x: auto;
+
+    border-top: 1px solid rgba(217, 222, 232, 0.6);
 
     scrollbar-width: none;
   }
