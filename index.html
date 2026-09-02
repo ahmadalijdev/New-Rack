@@ -2,679 +2,1909 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="OPEN RACK — Contemporary fashion for men, women and kids."
+  >
+
+  <meta
+    name="theme-color"
+    content="#F8F9FC"
+  >
+
   <title>OPEN RACK | Contemporary Fashion</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- =====================================================
+       GOOGLE FONTS
+  ====================================================== -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =====================================================
+       BOOTSTRAP ICONS
+  ====================================================== -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <!-- =====================================================
+       STYLESHEET
+  ====================================================== -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
+
 <body>
-  <header class="navbar">
-    <a href="#" class="logo">OPEN RACK</a>
-    <nav class="nav-center" aria-label="Main navigation">
-      <a href="#men-collection">MEN</a>
-      <a href="#women">WOMEN</a>
-      <a href="#kids">KIDS</a>
-      <a href="#accessories">ACCESSORIES</a>
-    </nav>
-    <div class="nav-social">
-      <a href="#" class="social-icon bag" id="bagBtn" aria-label="Shopping Bag">
-        <i class="bi bi-bag"></i>
-        <span class="bag-count" id="bagCount">0</span>
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <header class="navbar" id="navbar">
+
+    <div class="navbar-inner">
+
+      <!-- LOGO -->
+      <a
+        href="#home"
+        class="logo"
+        aria-label="OPEN RACK home"
+      >
+        OPEN RACK
       </a>
-      <a href="#" class="social-icon whatsapp" aria-label="WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-      </a>
-      <a href="#" class="social-icon instagram" aria-label="Instagram">
-        <i class="bi bi-instagram"></i>
-      </a>
+
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav
+        class="nav-links"
+        aria-label="Main navigation"
+      >
+
+        <a href="#men-collection">
+          MEN
+        </a>
+
+        <a href="#women">
+          WOMEN
+        </a>
+
+        <a href="#kids">
+          KIDS
+        </a>
+
+        <a href="#accessories">
+          ACCESSORIES
+        </a>
+
+      </nav>
+
+
+      <!-- DESKTOP ACTIONS -->
+      <div class="nav-actions">
+
+        <!-- SEARCH -->
+        <button
+          type="button"
+          class="nav-search-btn"
+          id="searchBtn"
+          aria-label="Open search"
+          aria-expanded="false"
+          aria-controls="searchPanel"
+        >
+          <i class="bi bi-search"></i>
+        </button>
+
+
+        <!-- BAG -->
+        <button
+          type="button"
+          class="nav-icon bag"
+          id="bagBtn"
+          aria-label="Open shopping bag"
+        >
+          <i class="bi bi-bag"></i>
+
+          <span
+            class="bag-count"
+            id="bagCount"
+            aria-live="polite"
+            aria-label="Items in bag"
+          >
+            0
+          </span>
+        </button>
+
+
+        <!-- WHATSAPP -->
+        <a
+          href="https://wa.me/923249481303"
+          class="nav-icon whatsapp-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact OPEN RACK on WhatsApp"
+        >
+          <i class="bi bi-whatsapp"></i>
+        </a>
+
+
+        <!-- INSTAGRAM
+             URL intentionally left as placeholder for now.
+        -->
+        <a
+          href="#"
+          class="nav-icon instagram-link"
+          aria-label="OPEN RACK Instagram"
+          data-placeholder-link="instagram"
+        >
+          <i class="bi bi-instagram"></i>
+        </a>
+
+      </div>
+
+
+      <!-- MOBILE ACTIONS -->
+      <div class="mobile-nav-actions">
+
+        <button
+          type="button"
+          class="mobile-search-btn"
+          id="mobileSearchBtn"
+          aria-label="Open search"
+          aria-expanded="false"
+          aria-controls="searchPanel"
+        >
+          <i class="bi bi-search"></i>
+        </button>
+
+      </div>
+
     </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+    <nav
+      class="mobile-nav-links"
+      aria-label="Mobile navigation"
+    >
+
+      <a href="#men-collection">
+        MEN
+      </a>
+
+      <a href="#women">
+        WOMEN
+      </a>
+
+      <a href="#kids">
+        KIDS
+      </a>
+
+      <a href="#accessories">
+        ACCESSORIES
+      </a>
+
+    </nav>
+
   </header>
-  <button type="button" class="contact-btn" id="contactBtn" aria-label="Open contact options">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-2.9-.4-4.1-1l-3.9 1 1-3.8a8.5 8.5 0 1 1 15.5-4.7Z"></path>
-      <path d="M8.5 9.5h7M8.5 13h4.5"></path>
-    </svg>
+
+
+  <!-- =====================================================
+       SEARCH PANEL
+  ====================================================== -->
+
+  <section
+    class="search-panel"
+    id="searchPanel"
+    aria-hidden="true"
+  >
+
+    <div class="search-panel-inner">
+
+      <div class="search-panel-header">
+
+        <h2>
+          SEARCH
+        </h2>
+
+        <button
+          type="button"
+          class="search-close"
+          id="searchClose"
+          aria-label="Close search"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+      </div>
+
+
+      <div class="search-input-wrapper">
+
+        <i class="bi bi-search"></i>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search products..."
+          autocomplete="off"
+          aria-label="Search products"
+        >
+
+        <button
+          type="button"
+          class="search-clear"
+          id="searchClear"
+          aria-label="Clear search"
+        >
+          <i class="bi bi-x"></i>
+        </button>
+
+      </div>
+
+
+      <div
+        class="search-results"
+        id="searchResults"
+        aria-live="polite"
+      >
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       MOBILE CONTACT BUTTON
+  ====================================================== -->
+
+  <button
+    type="button"
+    class="contact-btn"
+    aria-label="Open contact options"
+    aria-expanded="false"
+    aria-controls="contactPanel"
+  >
+    <i class="bi bi-chat-dots"></i>
   </button>
-  <div class="contact-panel" id="contactPanel">
-    <button type="button" class="contact-close" id="contactClose" aria-label="Close contact options">
-      <i class="bi bi-x-lg"></i>
-    </button>
-    <span class="contact-label">CONNECT WITH US</span>
-    <a href="#" class="contact-link whatsapp" aria-label="WhatsApp">
-      <i class="bi bi-whatsapp"></i>
-      <span>WHATSAPP</span>
-    </a>
-    <a href="#" class="contact-link instagram" aria-label="Instagram">
-      <i class="bi bi-instagram"></i>
-      <span>INSTAGRAM</span>
-    </a>
-  </div>
-  <div class="mobile-bag" id="mobileBagBtn" aria-label="Shopping Bag" role="button" tabindex="0">
-    <i class="bi bi-bag"></i>
-    <span class="mobile-bag-count" id="mobileBagCount">0</span>
-  </div>
-  <main>
-    <section class="hero">
-      <img class="hero-image" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2200&q=90" alt="Contemporary fashion campaign">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-copy">
-          <p class="hero-label">OPEN RACK / 2026 COLLECTION</p>
-          <h1 class="hero-title">OPEN YOUR<br>STYLE</h1>
-          <p class="hero-description">Contemporary clothing &amp; accessories</p>
-          <a href="#categories" class="hero-button">
-            <span>SHOP COLLECTION</span>
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
+
+
+  <!-- =====================================================
+       CONTACT PANEL
+  ====================================================== -->
+
+  <aside
+    class="contact-panel"
+    id="contactPanel"
+    aria-hidden="true"
+  >
+
+    <div class="contact-panel-header">
+
+      <div>
+        <span>
+          CONTACT
+        </span>
+
+        <h2>
+          GET IN TOUCH
+        </h2>
       </div>
-    </section>
-    <section class="categories" id="categories" aria-label="Collections">
-      <a href="#men-collection" class="category-card">
-        <img src="https://images.unsplash.com/photo-1509942774463-acf339cf87d5?auto=format&fit=crop&w=1000&q=90" alt="Men collection">
-        <div class="category-overlay"></div>
-        <span class="category-number">01</span>
-        <h2 class="category-title">MEN</h2>
-        <span class="category-arrow"><i class="bi bi-arrow-up-right"></i></span>
-      </a>
-      <a href="#women" class="category-card">
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=90" alt="Women collection">
-        <div class="category-overlay"></div>
-        <span class="category-number">02</span>
-        <h2 class="category-title">WOMEN</h2>
-        <span class="category-arrow"><i class="bi bi-arrow-up-right"></i></span>
-      </a>
-      <a href="#kids" class="category-card">
-        <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=1000&q=90" alt="Kids collection">
-        <div class="category-overlay"></div>
-        <span class="category-number">03</span>
-        <h2 class="category-title">KIDS</h2>
-        <span class="category-arrow"><i class="bi bi-arrow-up-right"></i></span>
-      </a>
-      <a href="#accessories" class="category-card">
-        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=90" alt="Accessories collection">
-        <div class="category-overlay"></div>
-        <span class="category-number">04</span>
-        <h2 class="category-title">ACCESSORIES</h2>
-        <span class="category-arrow"><i class="bi bi-arrow-up-right"></i></span>
-      </a>
-    </section>
-    <section class="men-collection" id="men-collection">
-      <div class="men-heading">
-        <div>
-          <h2>MEN</h2>
-          <p>Contemporary essentials designed<br>for everyday confidence.</p>
-        </div>
-      </div>
-      <div class="men-tabs">
-        <button type="button" class="tab active" data-filter="all">ALL</button>
-        <button type="button" class="tab" data-filter="new">NEW ARRIVALS</button>
-        <button type="button" class="tab" data-filter="tshirt">T-SHIRTS</button>
-        <button type="button" class="tab" data-filter="shirt">SHIRTS</button>
-        <button type="button" class="tab" data-filter="jacket">JACKETS</button>
-        <button type="button" class="tab" data-filter="pants">PANTS</button>
-        <button type="button" class="tab" data-filter="shoes">SHOES</button>
-        <button type="button" class="tab" data-filter="accessories">ACCESSORIES</button>
-      </div>
-      <div class="men-banner">
-        <img src="images/men-banner.png" alt="Men's fashion editorial">
-        <div class="men-banner-overlay"></div>
-        <div class="men-banner-content">
-          <span class="men-banner-label">OPEN RACK / MEN'S EDIT</span>
-          <h3>THE MEN'S EDIT</h3>
-          <p>Built for movement. Designed with purpose.</p>
-          <a href="#" class="men-banner-button">
-            <span>SHOP NEW ARRIVALS</span>
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </div>
-      <div class="men-product-grid">
-        <article class="men-product" data-category="tshirt new">
-          <div class="men-product-image">
-            <img src="YOUR_TSHIRT_IMAGE_URL" alt="Oversized T-Shirt">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Oversized T-Shirt</h3>
-              <span>T-Shirt</span>
-              <p>PKR 2,490</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="shirt new">
-          <div class="men-product-image">
-            <img src="YOUR_SHIRT_IMAGE_URL" alt="Structured Shirt">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Structured Shirt</h3>
-              <span>Shirt</span>
-              <p>PKR 3,490</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="jacket new">
-          <div class="men-product-image">
-            <img src="YOUR_JACKET_IMAGE_URL" alt="Lightweight Jacket">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Lightweight Jacket</h3>
-              <span>Jacket</span>
-              <p>PKR 5,990</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="pants">
-          <div class="men-product-image">
-            <img src="YOUR_PANTS_IMAGE_URL" alt="Relaxed Fit Trousers">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Relaxed Fit Trousers</h3>
-              <span>Pants</span>
-              <p>PKR 4,190</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="shoes">
-          <div class="men-product-image">
-            <img src="YOUR_SHOES_IMAGE_URL" alt="Minimal Sneakers">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Minimal Sneakers</h3>
-              <span>Shoes</span>
-              <p>PKR 6,690</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="accessories">
-          <div class="men-product-image">
-            <img src="YOUR_BAG_IMAGE_URL" alt="Leather Weekender Bag">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Leather Weekender Bag</h3>
-              <span>Accessories</span>
-              <p>PKR 8,990</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="accessories">
-          <div class="men-product-image">
-            <img src="YOUR_SUNGLASSES_IMAGE_URL" alt="Modern Sunglasses">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Modern Sunglasses</h3>
-              <span>Accessories</span>
-              <p>PKR 2,990</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="men-product" data-category="accessories">
-          <div class="men-product-image">
-            <img src="YOUR_WATCH_IMAGE_URL" alt="Minimal Watch">
-          </div>
-          <div class="men-product-info">
-            <div>
-              <h3>Minimal Watch</h3>
-              <span>Accessories</span>
-              <p>PKR 4,990</p>
-            </div>
-            <button type="button" class="bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="women-collection" id="women">
-      <div class="women-heading">
-        <div>
-          <h2>WOMEN</h2>
-          <p>Modern pieces designed around confidence, movement, and individuality.</p>
-        </div>
-      </div>
-      <div class="women-tabs">
-        <button type="button" class="women-tab active" data-filter="all">ALL</button>
-        <button type="button" class="women-tab" data-filter="new">NEW ARRIVALS</button>
-        <button type="button" class="women-tab" data-filter="tops">TOPS</button>
-        <button type="button" class="women-tab" data-filter="dresses">DRESSES</button>
-        <button type="button" class="women-tab" data-filter="jackets">JACKETS</button>
-        <button type="button" class="women-tab" data-filter="bottoms">BOTTOMS</button>
-        <button type="button" class="women-tab" data-filter="shoes">SHOES</button>
-        <button type="button" class="women-tab" data-filter="bags">BAGS</button>
-        <button type="button" class="women-tab" data-filter="accessories">ACCESSORIES</button>
-      </div>
-      <div class="women-banner">
-        <img src="images/women-banner.png" alt="Women's fashion editorial">
-        <div class="women-banner-overlay"></div>
-        <div class="women-banner-content">
-          <span class="women-banner-label">OPEN RACK / WOMEN'S EDIT</span>
-          <h3>THE WOMEN'S EDIT</h3>
-          <p>Defined by your own style.</p>
-          <a href="#" class="women-banner-button">
-            <span>SHOP NEW ARRIVALS</span>
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </div>
-      <div class="women-product-grid">
-        <article class="women-product" data-category="tops new">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_SHIRT_IMAGE_URL" alt="Oversized White Shirt">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Oversized White Shirt</h3>
-              <span>Tops</span>
-              <p>PKR 5,490</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="tops new">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_TOP_IMAGE_URL" alt="Black Fitted Top">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Black Fitted Top</h3>
-              <span>Tops</span>
-              <p>PKR 2,890</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="jackets new">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_JACKET_IMAGE_URL" alt="Modern Blue Jacket">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Modern Blue Jacket</h3>
-              <span>Jackets</span>
-              <p>PKR 8,990</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="bottoms">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_TROUSERS_IMAGE_URL" alt="Contemporary Black Trousers">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Contemporary Black Trousers</h3>
-              <span>Bottoms</span>
-              <p>PKR 6,490</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="shoes">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_SNEAKERS_IMAGE_URL" alt="Minimal White Sneakers">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Minimal White Sneakers</h3>
-              <span>Shoes</span>
-              <p>PKR 7,490</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="bags">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_HANDBAG_IMAGE_URL" alt="Structured Handbag">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Structured Handbag</h3>
-              <span>Bags</span>
-              <p>PKR 6,990</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="accessories">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_SUNGLASSES_IMAGE_URL" alt="Modern Sunglasses">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Modern Sunglasses</h3>
-              <span>Accessories</span>
-              <p>PKR 3,490</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="women-product" data-category="accessories">
-          <div class="women-product-image">
-            <img src="YOUR_WOMEN_WATCH_IMAGE_URL" alt="Elegant Wristwatch">
-          </div>
-          <div class="women-product-info">
-            <div>
-              <h3>Elegant Wristwatch</h3>
-              <span>Accessories</span>
-              <p>PKR 4,990</p>
-            </div>
-            <button type="button" class="women-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="kids-collection" id="kids">
-      <div class="kids-heading">
-        <div>
-          <h2>KIDS</h2>
-          <p>Contemporary styles made for movement, comfort, and everyday adventure.</p>
-        </div>
-      </div>
-      <div class="kids-tabs">
-        <button type="button" class="kids-tab active" data-filter="all">ALL</button>
-        <button type="button" class="kids-tab" data-filter="new">NEW ARRIVALS</button>
-        <button type="button" class="kids-tab" data-filter="boys">BOYS</button>
-        <button type="button" class="kids-tab" data-filter="girls">GIRLS</button>
-        <button type="button" class="kids-tab" data-filter="tops">TOPS</button>
-        <button type="button" class="kids-tab" data-filter="bottoms">BOTTOMS</button>
-        <button type="button" class="kids-tab" data-filter="sets">SETS</button>
-        <button type="button" class="kids-tab" data-filter="shoes">SHOES</button>
-        <button type="button" class="kids-tab" data-filter="accessories">ACCESSORIES</button>
-      </div>
-      <div class="kids-banner">
-        <img src="images/kids.png" alt="Kids fashion editorial">
-        <div class="kids-banner-overlay"></div>
-        <div class="kids-banner-content">
-          <span class="kids-banner-label">OPEN RACK / KIDS' EDIT</span>
-          <h3>THE KIDS' EDIT</h3>
-          <p>Made for every move. Designed for every adventure.</p>
-          <a href="#" class="kids-banner-button">
-            <span>SHOP NEW ARRIVALS</span>
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </div>
-      <div class="kids-product-grid">
-        <article class="kids-product" data-category="boys new tops">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_BOYS_HOODIE_IMAGE_URL" alt="Graphic Hoodie">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Graphic Hoodie</h3>
-              <span>Boys · Tops</span>
-              <p>PKR 2,850</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="girls new tops">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_GIRLS_SWEATSHIRT_IMAGE_URL" alt="Oversized Sweatshirt">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Oversized Sweatshirt</h3>
-              <span>Girls · Tops</span>
-              <p>PKR 2,450</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="boys new tops">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_TSHIRT_IMAGE_URL" alt="Striped Cotton T-Shirt">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Striped Cotton T-Shirt</h3>
-              <span>Boys · Tops</span>
-              <p>PKR 1,650</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="girls new jackets">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_JACKET_IMAGE_URL" alt="Denim Jacket">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Denim Jacket</h3>
-              <span>Girls · Jackets</span>
-              <p>PKR 3,250</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="boys new bottoms">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_CARGO_IMAGE_URL" alt="Cargo Joggers">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Cargo Joggers</h3>
-              <span>Boys · Bottoms</span>
-              <p>PKR 2,150</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="girls new bottoms">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_JEANS_IMAGE_URL" alt="Wide Leg Jeans">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Wide Leg Jeans</h3>
-              <span>Girls · Bottoms</span>
-              <p>PKR 2,350</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="boys new sets">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_SET_IMAGE_URL" alt="Everyday Cotton Set">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Everyday Cotton Set</h3>
-              <span>Boys · Sets</span>
-              <p>PKR 2,950</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="kids-product" data-category="girls shoes accessories">
-          <div class="kids-product-image">
-            <img src="YOUR_KIDS_SHOES_IMAGE_URL" alt="Kids Court Sneakers">
-          </div>
-          <div class="kids-product-info">
-            <div>
-              <h3>Kids Court Sneakers</h3>
-              <span>Shoes</span>
-              <p>PKR 2,950</p>
-            </div>
-            <button type="button" class="kids-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="accessories-collection" id="accessories">
-      <div class="accessories-heading">
-        <div>
-          <h2>ACCESSORIES</h2>
-          <p>Finishing pieces designed to complete your everyday look.</p>
-        </div>
-      </div>
-      <div class="accessories-tabs">
-        <button type="button" class="accessories-tab active" data-filter="all">ALL</button>
-        <button type="button" class="accessories-tab" data-filter="new">NEW ARRIVALS</button>
-        <button type="button" class="accessories-tab" data-filter="bags">BAGS</button>
-        <button type="button" class="accessories-tab" data-filter="watches">WATCHES</button>
-        <button type="button" class="accessories-tab" data-filter="sunglasses">SUNGLASSES</button>
-        <button type="button" class="accessories-tab" data-filter="belts">BELTS</button>
-        <button type="button" class="accessories-tab" data-filter="wallets">WALLETS</button>
-        <button type="button" class="accessories-tab" data-filter="jewelry">JEWELRY</button>
-      </div>
-      <div class="accessories-banner">
-        <img src="images/accessories.png" alt="Accessories editorial">
-        <div class="accessories-banner-overlay"></div>
-        <div class="accessories-banner-content">
-          <span class="accessories-banner-label">OPEN RACK / ACCESSORIES EDIT</span>
-          <h3>THE FINAL TOUCH</h3>
-          <p>Essential details. Distinctive finish.</p>
-          <a href="#" class="accessories-banner-button">
-            <span>SHOP ACCESSORIES</span>
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </div>
-      <div class="accessories-product-grid">
-        <article class="accessories-product" data-category="bags new">
-          <div class="accessories-product-image">
-            <img src="YOUR_BAG_IMAGE_URL" alt="Structured Leather Bag">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Structured Leather Bag</h3>
-              <span>Bags</span>
-              <p>PKR 6,990</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="watches new">
-          <div class="accessories-product-image">
-            <img src="YOUR_WATCH_IMAGE_URL" alt="Minimal Steel Watch">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Minimal Steel Watch</h3>
-              <span>Watches</span>
-              <p>PKR 4,990</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="sunglasses new">
-          <div class="accessories-product-image">
-            <img src="YOUR_SUNGLASSES_IMAGE_URL" alt="Modern Frame Sunglasses">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Modern Frame Sunglasses</h3>
-              <span>Sunglasses</span>
-              <p>PKR 2,990</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="belts">
-          <div class="accessories-product-image">
-            <img src="YOUR_BELT_IMAGE_URL" alt="Classic Leather Belt">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Classic Leather Belt</h3>
-              <span>Belts</span>
-              <p>PKR 1,990</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="wallets">
-          <div class="accessories-product-image">
-            <img src="YOUR_WALLET_IMAGE_URL" alt="Slim Leather Wallet">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Slim Leather Wallet</h3>
-              <span>Wallets</span>
-              <p>PKR 2,490</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="bags">
-          <div class="accessories-product-image">
-            <img src="YOUR_CROSSBODY_IMAGE_URL" alt="Compact Crossbody Bag">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Compact Crossbody Bag</h3>
-              <span>Bags</span>
-              <p>PKR 4,490</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="jewelry new">
-          <div class="accessories-product-image">
-            <img src="YOUR_JEWELRY_IMAGE_URL" alt="Minimal Chain">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Minimal Chain</h3>
-              <span>Jewelry</span>
-              <p>PKR 2,290</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-        <article class="accessories-product" data-category="sunglasses">
-          <div class="accessories-product-image">
-            <img src="YOUR_SQUARE_SUNGLASSES_IMAGE_URL" alt="Square Frame Sunglasses">
-          </div>
-          <div class="accessories-product-info">
-            <div>
-              <h3>Square Frame Sunglasses</h3>
-              <span>Sunglasses</span>
-              <p>PKR 3,490</p>
-            </div>
-            <button type="button" class="accessories-bag-btn">ADD TO BAG <i class="bi bi-bag"></i></button>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-  <div class="bag-overlay" id="bagOverlay"></div>
-  <aside class="bag-panel" id="bagPanel" aria-label="Shopping bag">
-    <div class="bag-header">
-      <h2>YOUR BAG</h2>
-      <button type="button" id="closeBag" aria-label="Close shopping bag">
+
+      <button
+        type="button"
+        class="contact-close"
+        aria-label="Close contact panel"
+      >
         <i class="bi bi-x-lg"></i>
       </button>
+
     </div>
-    <div class="bag-items" id="bagItems">
-      <p class="empty-bag">Your bag is empty.</p>
+
+
+    <div class="contact-links">
+
+      <a
+        href="https://wa.me/923249481303"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+      >
+        <i class="bi bi-whatsapp"></i>
+
+        <span>
+          WhatsApp
+        </span>
+      </a>
+
+
+      <a
+        href="mailto:ahmadalij.dev@gmail.com"
+        class="contact-link"
+      >
+        <i class="bi bi-envelope"></i>
+
+        <span>
+          Email
+        </span>
+      </a>
+
+
+      <!-- Instagram intentionally disabled until URL is provided -->
+      <a
+        href="#"
+        class="contact-link"
+        data-placeholder-link="instagram"
+      >
+        <i class="bi bi-instagram"></i>
+
+        <span>
+          Instagram
+        </span>
+      </a>
+
     </div>
-    <div class="bag-footer">
-      <div>
-        <span>TOTAL</span>
-        <strong id="bagTotal">PKR 0</strong>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MOBILE BAG BUTTON
+  ====================================================== -->
+
+  <button
+    type="button"
+    class="mobile-bag"
+    id="mobileBagBtn"
+    aria-label="Open shopping bag"
+  >
+
+    <i class="bi bi-bag"></i>
+
+    <span
+      class="mobile-bag-count"
+      id="mobileBagCount"
+      aria-live="polite"
+    >
+      0
+    </span>
+
+  </button>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <main>
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="hero-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2000&q=85"
+          alt="Contemporary fashion collection"
+          fetchpriority="high"
+        >
+
       </div>
-      <button type="button" class="checkout-btn">
-        PLACE ORDER ON WHATSAPP &nbsp;
+
+
+      <div class="hero-overlay"></div>
+
+
+      <div class="hero-content">
+
+        <span class="hero-label">
+          OPEN RACK / 2026 COLLECTION
+        </span>
+
+        <h1>
+          OPEN YOUR<br>
+          STYLE
+        </h1>
+
+        <p>
+          Contemporary pieces designed for
+          everyday confidence.
+        </p>
+
+        <a
+          href="#categories"
+          class="hero-btn"
+        >
+          SHOP COLLECTION
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CATEGORIES
+    ====================================================== -->
+
+    <section
+      class="categories"
+      id="categories"
+    >
+
+      <div class="section-heading">
+
+        <span>
+          EXPLORE
+        </span>
+
+        <h2>
+          SHOP BY CATEGORY
+        </h2>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <!-- MEN -->
+        <a
+          href="#men-collection"
+          class="category-card"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1000&q=85"
+            alt="Men's fashion"
+            loading="lazy"
+          >
+
+          <div class="category-overlay"></div>
+
+          <div class="category-content">
+
+            <span>
+              01
+            </span>
+
+            <h3>
+              MEN
+            </h3>
+
+            <p>
+              SHOP COLLECTION
+              <i class="bi bi-arrow-up-right"></i>
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- WOMEN -->
+        <a
+          href="#women"
+          class="category-card"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+            alt="Women's fashion"
+            loading="lazy"
+          >
+
+          <div class="category-overlay"></div>
+
+          <div class="category-content">
+
+            <span>
+              02
+            </span>
+
+            <h3>
+              WOMEN
+            </h3>
+
+            <p>
+              SHOP COLLECTION
+              <i class="bi bi-arrow-up-right"></i>
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- KIDS -->
+        <a
+          href="#kids"
+          class="category-card"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=85"
+            alt="Kids fashion"
+            loading="lazy"
+          >
+
+          <div class="category-overlay"></div>
+
+          <div class="category-content">
+
+            <span>
+              03
+            </span>
+
+            <h3>
+              KIDS
+            </h3>
+
+            <p>
+              SHOP COLLECTION
+              <i class="bi bi-arrow-up-right"></i>
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- ACCESSORIES -->
+        <a
+          href="#accessories"
+          class="category-card"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=1000&q=85"
+            alt="Fashion accessories"
+            loading="lazy"
+          >
+
+          <div class="category-overlay"></div>
+
+          <div class="category-content">
+
+            <span>
+              04
+            </span>
+
+            <h3>
+              ACCESSORIES
+            </h3>
+
+            <p>
+              SHOP COLLECTION
+              <i class="bi bi-arrow-up-right"></i>
+            </p>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEN COLLECTION
+    ====================================================== -->
+
+    <section
+      class="collection-section"
+      id="men-collection"
+    >
+
+      <div class="collection-header">
+
+        <div class="collection-title">
+
+          <span>
+            01 / MEN
+          </span>
+
+          <h2>
+            MEN
+          </h2>
+
+        </div>
+
+        <p>
+          Contemporary essentials built around
+          clean silhouettes, versatile layers,
+          and everyday wear.
+        </p>
+
+      </div>
+
+
+      <!-- MEN FILTERS -->
+      <div
+        class="product-tabs men-tabs"
+        role="tablist"
+        aria-label="Men product categories"
+      >
+
+        <button
+          type="button"
+          class="tab active"
+          data-filter="all"
+          role="tab"
+          aria-selected="true"
+        >
+          ALL
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="new"
+          role="tab"
+          aria-selected="false"
+        >
+          NEW
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="tshirt"
+          role="tab"
+          aria-selected="false"
+        >
+          T-SHIRTS
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="shirt"
+          role="tab"
+          aria-selected="false"
+        >
+          SHIRTS
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="jacket"
+          role="tab"
+          aria-selected="false"
+        >
+          JACKETS
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="pants"
+          role="tab"
+          aria-selected="false"
+        >
+          PANTS
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="shoes"
+          role="tab"
+          aria-selected="false"
+        >
+          SHOES
+        </button>
+
+        <button
+          type="button"
+          class="tab"
+          data-filter="accessories"
+          role="tab"
+          aria-selected="false"
+        >
+          ACCESSORIES
+        </button>
+
+      </div>
+
+
+      <!-- MEN BANNER -->
+      <div class="editorial-banner">
+
+        <img
+          src="images/men-banner.png"
+          alt="OPEN RACK men's collection"
+          loading="lazy"
+        >
+
+        <div class="editorial-overlay"></div>
+
+        <div class="editorial-content">
+
+          <span>
+            OPEN RACK / MEN
+          </span>
+
+          <h3>
+            EVERYDAY,<br>
+            REFINED.
+          </h3>
+
+          <a
+            href="#men-collection"
+            class="editorial-btn"
+            data-filter-target="all"
+          >
+            SHOP MEN
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- MEN PRODUCTS -->
+      <div
+        class="product-grid men-product-grid"
+        aria-live="polite"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WOMEN COLLECTION
+    ====================================================== -->
+
+    <section
+      class="collection-section"
+      id="women"
+    >
+
+      <div class="collection-header">
+
+        <div class="collection-title">
+
+          <span>
+            02 / WOMEN
+          </span>
+
+          <h2>
+            WOMEN
+          </h2>
+
+        </div>
+
+        <p>
+          Modern silhouettes and versatile
+          essentials designed for effortless
+          everyday styling.
+        </p>
+
+      </div>
+
+
+      <!-- WOMEN FILTERS -->
+      <div
+        class="product-tabs women-tabs"
+        role="tablist"
+        aria-label="Women product categories"
+      >
+
+        <button
+          type="button"
+          class="women-tab active"
+          data-filter="all"
+          role="tab"
+          aria-selected="true"
+        >
+          ALL
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="new"
+          role="tab"
+          aria-selected="false"
+        >
+          NEW
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="tops"
+          role="tab"
+          aria-selected="false"
+        >
+          TOPS
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="dresses"
+          role="tab"
+          aria-selected="false"
+        >
+          DRESSES
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="jackets"
+          role="tab"
+          aria-selected="false"
+        >
+          JACKETS
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="bottoms"
+          role="tab"
+          aria-selected="false"
+        >
+          BOTTOMS
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="shoes"
+          role="tab"
+          aria-selected="false"
+        >
+          SHOES
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="bags"
+          role="tab"
+          aria-selected="false"
+        >
+          BAGS
+        </button>
+
+        <button
+          type="button"
+          class="women-tab"
+          data-filter="accessories"
+          role="tab"
+          aria-selected="false"
+        >
+          ACCESSORIES
+        </button>
+
+      </div>
+
+
+      <!-- WOMEN BANNER -->
+      <div class="editorial-banner">
+
+        <img
+          src="images/women-banner.png"
+          alt="OPEN RACK women's collection"
+          loading="lazy"
+        >
+
+        <div class="editorial-overlay"></div>
+
+        <div class="editorial-content">
+
+          <span>
+            OPEN RACK / WOMEN
+          </span>
+
+          <h3>
+            SIMPLE.<br>
+            STRONG.
+          </h3>
+
+          <a
+            href="#women"
+            class="editorial-btn"
+            data-filter-target="all"
+          >
+            SHOP WOMEN
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- WOMEN PRODUCTS -->
+      <div
+        class="product-grid women-product-grid"
+        aria-live="polite"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KIDS COLLECTION
+    ====================================================== -->
+
+    <section
+      class="collection-section"
+      id="kids"
+    >
+
+      <div class="collection-header">
+
+        <div class="collection-title">
+
+          <span>
+            03 / KIDS
+          </span>
+
+          <h2>
+            KIDS
+          </h2>
+
+        </div>
+
+        <p>
+          Comfortable everyday pieces designed
+          for movement, play, and easy styling.
+        </p>
+
+      </div>
+
+
+      <!-- KIDS FILTERS -->
+      <div
+        class="product-tabs kids-tabs"
+        role="tablist"
+        aria-label="Kids product categories"
+      >
+
+        <button
+          type="button"
+          class="kids-tab active"
+          data-filter="all"
+          role="tab"
+          aria-selected="true"
+        >
+          ALL
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="new"
+          role="tab"
+          aria-selected="false"
+        >
+          NEW
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="boys"
+          role="tab"
+          aria-selected="false"
+        >
+          BOYS
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="girls"
+          role="tab"
+          aria-selected="false"
+        >
+          GIRLS
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="tops"
+          role="tab"
+          aria-selected="false"
+        >
+          TOPS
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="bottoms"
+          role="tab"
+          aria-selected="false"
+        >
+          BOTTOMS
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="sets"
+          role="tab"
+          aria-selected="false"
+        >
+          SETS
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="shoes"
+          role="tab"
+          aria-selected="false"
+        >
+          SHOES
+        </button>
+
+        <button
+          type="button"
+          class="kids-tab"
+          data-filter="accessories"
+          role="tab"
+          aria-selected="false"
+        >
+          ACCESSORIES
+        </button>
+
+      </div>
+
+
+      <!-- KIDS BANNER -->
+      <div class="editorial-banner">
+
+        <img
+          src="images/kids.png"
+          alt="OPEN RACK kids collection"
+          loading="lazy"
+        >
+
+        <div class="editorial-overlay"></div>
+
+        <div class="editorial-content">
+
+          <span>
+            OPEN RACK / KIDS
+          </span>
+
+          <h3>
+            MADE TO<br>
+            MOVE.
+          </h3>
+
+          <a
+            href="#kids"
+            class="editorial-btn"
+            data-filter-target="all"
+          >
+            SHOP KIDS
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- KIDS PRODUCTS -->
+      <div
+        class="product-grid kids-product-grid"
+        aria-live="polite"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACCESSORIES COLLECTION
+    ====================================================== -->
+
+    <section
+      class="collection-section"
+      id="accessories"
+    >
+
+      <div class="collection-header">
+
+        <div class="collection-title">
+
+          <span>
+            04 / ACCESSORIES
+          </span>
+
+          <h2>
+            ACCESSORIES
+          </h2>
+
+        </div>
+
+        <p>
+          Refined finishing pieces designed
+          to complete everyday looks.
+        </p>
+
+      </div>
+
+
+      <!-- ACCESSORIES FILTERS -->
+      <div
+        class="product-tabs accessories-tabs"
+        role="tablist"
+        aria-label="Accessories product categories"
+      >
+
+        <button
+          type="button"
+          class="accessories-tab active"
+          data-filter="all"
+          role="tab"
+          aria-selected="true"
+        >
+          ALL
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="new"
+          role="tab"
+          aria-selected="false"
+        >
+          NEW
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="bags"
+          role="tab"
+          aria-selected="false"
+        >
+          BAGS
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="watches"
+          role="tab"
+          aria-selected="false"
+        >
+          WATCHES
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="sunglasses"
+          role="tab"
+          aria-selected="false"
+        >
+          SUNGLASSES
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="belts"
+          role="tab"
+          aria-selected="false"
+        >
+          BELTS
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="wallets"
+          role="tab"
+          aria-selected="false"
+        >
+          WALLETS
+        </button>
+
+        <button
+          type="button"
+          class="accessories-tab"
+          data-filter="jewelry"
+          role="tab"
+          aria-selected="false"
+        >
+          JEWELRY
+        </button>
+
+      </div>
+
+
+      <!-- ACCESSORIES BANNER -->
+      <div class="editorial-banner">
+
+        <img
+          src="images/accessories.png"
+          alt="OPEN RACK accessories collection"
+          loading="lazy"
+        >
+
+        <div class="editorial-overlay"></div>
+
+        <div class="editorial-content">
+
+          <span>
+            OPEN RACK / ACCESSORIES
+          </span>
+
+          <h3>
+            THE FINAL<br>
+            DETAIL.
+          </h3>
+
+          <a
+            href="#accessories"
+            class="editorial-btn"
+            data-filter-target="all"
+          >
+            SHOP ACCESSORIES
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ACCESSORIES PRODUCTS -->
+      <div
+        class="product-grid accessories-product-grid"
+        aria-live="polite"
+      >
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       PRODUCT MODAL OVERLAY
+  ====================================================== -->
+
+  <div
+    class="product-modal-overlay"
+    id="productModalOverlay"
+    aria-hidden="true"
+  >
+
+    <section
+      class="product-modal"
+      id="productModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="productModalName"
+      aria-hidden="true"
+    >
+
+      <!-- MODAL CLOSE -->
+      <button
+        type="button"
+        class="product-modal-close"
+        id="productModalClose"
+        aria-label="Close product details"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+
+      <!-- =================================================
+           MODAL IMAGE SIDE
+      ================================================== -->
+
+      <div class="product-modal-image-side">
+
+        <div
+          class="product-modal-images"
+          id="productModalImages"
+        >
+        </div>
+
+
+        <!-- PREVIOUS -->
+        <button
+          type="button"
+          class="product-modal-arrow product-modal-prev"
+          id="productModalPrev"
+          aria-label="Previous product image"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+
+        <!-- NEXT -->
+        <button
+          type="button"
+          class="product-modal-arrow product-modal-next"
+          id="productModalNext"
+          aria-label="Next product image"
+        >
+          <i class="bi bi-arrow-right"></i>
+        </button>
+
+
+        <!-- IMAGE DOTS -->
+        <div
+          class="product-modal-dots"
+          id="productModalDots"
+          aria-label="Product images"
+        >
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           MODAL DETAILS
+      ================================================== -->
+
+      <div class="product-modal-details">
+
+        <div class="product-modal-details-inner">
+
+          <span
+            class="product-modal-category"
+            id="productModalCategory"
+          >
+          </span>
+
+
+          <h2
+            id="productModalName"
+          >
+          </h2>
+
+
+          <p
+            class="product-modal-price"
+            id="productModalPrice"
+          >
+          </p>
+
+
+          <p
+            class="product-modal-description"
+            id="productModalDescription"
+          >
+          </p>
+
+
+          <!-- COLOR -->
+          <div class="product-modal-option">
+
+            <div class="product-modal-option-label">
+
+              <span>
+                COLOR
+              </span>
+
+              <strong
+                id="productModalColor"
+              >
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <!-- SIZE -->
+          <div class="product-modal-option">
+
+            <div class="product-modal-option-label">
+
+              <span>
+                SIZE
+              </span>
+
+              <strong
+                id="productModalSelectedSize"
+              >
+                SELECT SIZE
+              </strong>
+
+            </div>
+
+
+            <div
+              class="product-modal-sizes"
+              id="productModalSizes"
+            >
+            </div>
+
+          </div>
+
+
+          <!-- ADD TO BAG -->
+          <button
+            type="button"
+            class="product-order-btn"
+            id="productOrderBtn"
+          >
+            ADD TO BAG
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- =====================================================
+       SHOPPING BAG OVERLAY
+  ====================================================== -->
+
+  <div
+    class="bag-overlay"
+    id="bagOverlay"
+    aria-hidden="true"
+  >
+  </div>
+
+
+  <!-- =====================================================
+       SHOPPING BAG
+  ====================================================== -->
+
+  <aside
+    class="bag-panel"
+    id="bagPanel"
+    aria-hidden="true"
+    aria-labelledby="bagTitle"
+  >
+
+    <!-- BAG HEADER -->
+    <div class="bag-header">
+
+      <div>
+
+        <span>
+          YOUR
+        </span>
+
+        <h2 id="bagTitle">
+          SHOPPING BAG
+        </h2>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="close-bag"
+        id="closeBag"
+        aria-label="Close shopping bag"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+    </div>
+
+
+    <!-- BAG ITEMS -->
+    <div
+      class="bag-items"
+      id="bagItems"
+      aria-live="polite"
+    >
+    </div>
+
+
+    <!-- BAG FOOTER -->
+    <div class="bag-footer">
+
+      <div class="bag-total-row">
+
+        <span>
+          TOTAL
+        </span>
+
+        <strong
+          class="bag-total"
+          id="bagTotal"
+        >
+          PKR 0
+        </strong>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="checkout-btn"
+        id="checkoutBtn"
+      >
+        CHECKOUT ON WHATSAPP
+
         <i class="bi bi-whatsapp"></i>
       </button>
+
+
+      <p class="checkout-note">
+        Your order will be sent to OPEN RACK
+        through WhatsApp for confirmation.
+      </p>
+
     </div>
+
   </aside>
-  <script src="script.js"></script>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="footer-main">
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+
+        <a
+          href="#home"
+          class="footer-logo"
+        >
+          OPEN RACK
+        </a>
+
+        <p>
+          Contemporary fashion for everyday
+          expression.
+        </p>
+
+
+        <div class="footer-social">
+
+          <a
+            href="https://wa.me/923249481303"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="OPEN RACK WhatsApp"
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+
+          <!-- Instagram intentionally left as placeholder -->
+          <a
+            href="#"
+            aria-label="OPEN RACK Instagram"
+            data-placeholder-link="instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+
+          <a
+            href="mailto:ahmadalij.dev@gmail.com"
+            aria-label="Email OPEN RACK"
+          >
+            <i class="bi bi-envelope"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- SHOP -->
+      <div class="footer-column">
+
+        <h3>
+          SHOP
+        </h3>
+
+        <a href="#men-collection">
+          Men
+        </a>
+
+        <a href="#women">
+          Women
+        </a>
+
+        <a href="#kids">
+          Kids
+        </a>
+
+        <a href="#accessories">
+          Accessories
+        </a>
+
+      </div>
+
+
+      <!-- INFORMATION -->
+      <div class="footer-column">
+
+        <h3>
+          INFORMATION
+        </h3>
+
+        <a href="#about">
+          About Us
+        </a>
+
+        <a href="#shipping">
+          Shipping
+        </a>
+
+        <a href="#returns">
+          Returns
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- LEGAL -->
+      <div class="footer-column">
+
+        <h3>
+          LEGAL
+        </h3>
+
+        <a href="#privacy">
+          Privacy Policy
+        </a>
+
+        <a href="#terms">
+          Terms &amp; Conditions
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 OPEN RACK. ALL RIGHTS RESERVED.
+      </p>
+
+      <a href="#home">
+        BACK TO TOP
+        <i class="bi bi-arrow-up"></i>
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       INFORMATION SECTIONS
+       Kept lightweight for now so navigation has real
+       destinations. These can later be turned into pages.
+  ====================================================== -->
+
+  <section
+    class="info-section"
+    id="about"
+  >
+
+    <div class="info-section-inner">
+
+      <span>
+        OPEN RACK
+      </span>
+
+      <h2>
+        ABOUT US
+      </h2>
+
+      <p>
+        OPEN RACK is a contemporary fashion store
+        focused on clean design, versatile pieces,
+        and everyday style.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="info-section"
+    id="shipping"
+  >
+
+    <div class="info-section-inner">
+
+      <span>
+        OPEN RACK
+      </span>
+
+      <h2>
+        SHIPPING
+      </h2>
+
+      <p>
+        Shipping information will be confirmed
+        with you when your WhatsApp order is
+        placed.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="info-section"
+    id="returns"
+  >
+
+    <div class="info-section-inner">
+
+      <span>
+        OPEN RACK
+      </span>
+
+      <h2>
+        RETURNS
+      </h2>
+
+      <p>
+        Return information will be confirmed
+        according to the product and order
+        conditions at the time of purchase.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="info-section"
+    id="contact"
+  >
+
+    <div class="info-section-inner">
+
+      <span>
+        CONTACT
+      </span>
+
+      <h2>
+        GET IN TOUCH
+      </h2>
+
+      <p>
+        WhatsApp:
+        <a
+          href="https://wa.me/923249481303"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          0324 9481303
+        </a>
+      </p>
+
+      <p>
+        Email:
+        <a
+          href="mailto:ahmadalij.dev@gmail.com"
+        >
+          ahmadalij.dev@gmail.com
+        </a>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="info-section"
+    id="privacy"
+  >
+
+    <div class="info-section-inner">
+
+      <span>
+        OPEN RACK
+      </span>
+
+      <h2>
+        PRIVACY POLICY
+      </h2>
+
+      <p>
+        OPEN RACK only uses information required
+        to communicate with customers and process
+        their orders.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="info-section"
+    id="terms"
+  >
+
+    <div class="info-section-inner">
+
+      <span>
+        OPEN RACK
+      </span>
+
+      <h2>
+        TERMS &amp; CONDITIONS
+      </h2>
+
+      <p>
+        Product availability, pricing, shipping,
+        payment, and order confirmation will be
+        confirmed before an order is finalized.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script
+    src="script.js"
+    defer
+  ></script>
+
 </body>
 </html>
