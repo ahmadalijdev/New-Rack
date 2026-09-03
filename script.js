@@ -5368,3 +5368,37 @@ if (
 
   init();
 }
+
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+
+function closeMobileMenu() {
+  mobileMenuPanel.classList.remove('open');
+  mobileMenuPanel.setAttribute('aria-hidden', 'true');
+  mobileMenuBtn.setAttribute('aria-expanded', 'false');
+}
+
+function openMobileMenu() {
+  mobileMenuPanel.classList.add('open');
+  mobileMenuPanel.setAttribute('aria-hidden', 'false');
+  mobileMenuBtn.setAttribute('aria-expanded', 'true');
+}
+
+mobileMenuBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileMenuPanel.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+});
+
+mobileMenuPanel.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', closeMobileMenu);
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuPanel.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+    closeMobileMenu();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
